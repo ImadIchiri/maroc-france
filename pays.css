@@ -1,0 +1,59 @@
+section {
+  padding: 60px 30px;
+}
+
+section h1 {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto 30px auto;
+  font-size: 3rem;
+}
+
+section h1::before {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  right: 0;
+  height: 3px;
+  width: 0;
+  background-color: green;
+  transition: 0.3s ease-in-out;
+}
+
+section h1::after {
+  position: absolute;
+  content: "";
+  left: -10px;
+  bottom: 0;
+  height: 0;
+  width: 4px;
+  background-color: green;
+  transition: 0.3s ease-in-out;
+}
+
+section h1:hover::before {
+  width: calc(100% + 10px);
+}
+
+section h1:hover::after {
+  height: 100%;
+}
+
+section figure {
+  width: 350px;
+  margin: auto;
+  margin-bottom: 50px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: lightblue;
+}
+
+section figure img {
+  width: 100%;
+}
+
+section figure figcaption {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 20px 0;
+}
